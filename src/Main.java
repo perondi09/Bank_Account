@@ -13,7 +13,7 @@ public class Main {
 
         String menu = """
                 Digite a opção escolhida
-                1 - Consultar saldo 
+                1 - Consultar saldo
                 2 - Transferir valor
                 3 - Receber valor
                 4 - Sair
