@@ -2,47 +2,47 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String nome = "Bruce Wayn";
-        String tipoConta = "Corrente";
-        double saldo = 1000.00;
-        int opcao = 0;
+        String name = "Bruce Wayn";
+        String accountTypes = "Corrente";
+        double balance = 1000.00;
+        int option = 0;
 
-        System.out.println("Nome: " + nome);
-        System.out.println("Tipo de conta: " + tipoConta);
-        System.out.println("Saldo atual: " + saldo);
+        System.out.println("Name: " + name);
+        System.out.println("Account type: " + accountTypes);
+        System.out.println("Current balance: " + balance);
 
         String menu = """
-                Digite a opção escolhida
-                1 - Consultar saldo
-                2 - Transferir valor
-                3 - Receber valor
-                4 - Sair
+                Enter the option
+                1 - Check balance
+                2 - Transfer
+                3 - Receive
+                4 - Exit
                 """;
 
-        Scanner leitura = new Scanner(System.in);
+        Scanner reading = new Scanner(System.in);
 
-        while (opcao != 4) {
+        while (option != 4) {
             System.out.println(menu);
-            opcao = leitura.nextInt();
+            option = reading.nextInt();
 
-            if (opcao == 1) {
-                System.out.println("o saldo atual é de: " + saldo);
-            } else if (opcao == 2) {
-                System.out.println("Valor que sera tranferido");
-                double valor = leitura.nextDouble();
-                if (valor > saldo) {
-                    System.out.println("Operação invalida");
+            if (option == 1) {
+                System.out.println("Current balance is: " + balance);
+            } else if (option == 2) {
+                System.out.println("Amount that will be transferred");
+                double value = reading.nextDouble();
+                if (value > balance) {
+                    System.out.println("Operation invalid");
                 } else {
-                    saldo -= valor;
-                    System.out.println("Saldo atual: " + saldo);
+                    balance -= value;
+                    System.out.println("Current balance: " + balance);
                 }
-            } else if (opcao == 3) {
-                System.out.println("Valor recebido: ");
-                double valor = leitura.nextDouble();
-                saldo += valor;
-                System.out.println("Saldo atual: " + saldo);
-            }else if (opcao != 4) {
-                System.out.println("Opão invalida!");
+            } else if (option == 3) {
+                System.out.println("Amount received: ");
+                double value = reading.nextDouble();
+                balance += value;
+                System.out.println("Current balance: " + balance);
+            }else if (option != 4) {
+                System.out.println("Operation invalid");
             }
         }
     }
